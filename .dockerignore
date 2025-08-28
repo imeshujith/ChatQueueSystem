@@ -1,0 +1,14 @@
+bin/
+obj/
+*.db
+*.user
+*.vs
+.vscode
+Dockerfile
+README.md
+.git
+.gitignore
+*.suo
+*.userprefs
+*.DS_Store
+.env

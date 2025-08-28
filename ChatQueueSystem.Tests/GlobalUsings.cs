@@ -1,0 +1,1 @@
+global using ChatQueueSystem.Domain.Entities;

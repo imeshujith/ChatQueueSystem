@@ -1,0 +1,14 @@
+### Create a new chat session
+POST http://localhost:8008/api/v1/chats
+Content-Type: application/json
+
+{
+  "userId": "test_user_1"
+}
+
+### Poll chat session (replace {sessionId} with actual value)
+GET http://localhost:8008/api/v1/chats/{sessionId}/poll
+
+### Get API status
+GET http://localhost:8008/api/v1/chats/status
+

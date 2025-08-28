@@ -1,0 +1,42 @@
+# .gitignore for .NET projects
+
+# Build results
+bin/
+obj/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Rider/VSCode/JetBrains
+.idea/
+.vscode/
+*.sln.iml
+
+# Logs
+*.log
+
+# Database
+*.db
+*.db-shm
+*.db-wal
+
+# Test results
+TestResults/
+
+# Others
+*.swp
+*.bak
+*.tmp
+
+# Docker
+*.pid
+
+# Exclude secrets
+appsettings.Development.json
