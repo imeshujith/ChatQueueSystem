@@ -18,7 +18,7 @@ public class QueueProcessorService : BackgroundService
     protected override async Task ExecuteAsync(CancellationToken stoppingToken)
     {
         _logger.LogInformation("Queue Processor Service started");
-        
+
         while (!stoppingToken.IsCancellationRequested)
         {
             try
@@ -29,7 +29,7 @@ public class QueueProcessorService : BackgroundService
             {
                 _logger.LogError(ex, "Error processing queue");
             }
-            
+
             await Task.Delay(1000, stoppingToken);
         }
     }

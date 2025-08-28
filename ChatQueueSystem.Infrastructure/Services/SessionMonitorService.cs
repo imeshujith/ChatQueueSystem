@@ -20,14 +20,14 @@ public class SessionMonitorService : BackgroundService
     protected override async Task ExecuteAsync(CancellationToken stoppingToken)
     {
         _logger.LogInformation("Session Monitor Service started");
-        
+
         while (!stoppingToken.IsCancellationRequested)
         {
             try
             {
                 using var scope = _serviceProvider.CreateScope();
                 var chatSessionRepository = scope.ServiceProvider.GetRequiredService<IChatSessionRepository>();
-                
+
                 var inactiveSessions = await chatSessionRepository.GetInactiveSessionsAsync();
                 foreach (var session in inactiveSessions)
                 {
@@ -44,7 +44,7 @@ public class SessionMonitorService : BackgroundService
             {
                 _logger.LogError(ex, "Error monitoring sessions");
             }
-            
+
             await Task.Delay(3000, stoppingToken);
         }
     }

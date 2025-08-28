@@ -21,10 +21,10 @@ public static class InfrastructureServiceCollectionExtensions
         services.AddScoped<IChatSessionRepository, ChatSessionRepository>();
         services.AddScoped<ITeamRepository, TeamRepository>();
         services.AddScoped<IAgentRepository, AgentRepository>();
-        
+
         services.AddSingleton<IQueueService, QueueService>();
         services.AddScoped<IChatAssignmentService, ChatAssignmentService>();
-        
+
         services.AddHostedService<QueueProcessorService>();
         services.AddHostedService<SessionMonitorService>();
 

@@ -21,7 +21,7 @@ public class CreateChatSessionCommandHandler : IRequestHandler<CreateChatSession
     {
         var activeTeams = await _teamRepository.GetActiveTeamsAsync();
         var overflowTeam = await _teamRepository.GetOverflowTeamAsync();
-        
+
         bool isOfficeHours = IsOfficeHours();
         int totalCapacity = activeTeams.Sum(team => team.TotalCapacity);
         int totalQueueLength = await _chatSessionRepository.GetQueueLengthAsync();
