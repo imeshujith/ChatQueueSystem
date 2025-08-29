@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatQueueSystem.Domain", "C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatQueueSystem.Infrastructure", "ChatQueueSystem.Infrastructure\ChatQueueSystem.Infrastructure.csproj", "{D9EB91F3-D729-4B69-BE0C-B95832E39BBE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatQueueSystem.Tests", "ChatQueueSystem.Tests\ChatQueueSystem.Tests.csproj", "{872A5EE5-888B-49D7-9DC6-A53CA0899306}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatQueueSystem.Tests", "tests\ChatQueueSystem.Tests\ChatQueueSystem.Tests.csproj", "{872A5EE5-888B-49D7-9DC6-A53CA0899306}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
