@@ -61,7 +61,7 @@ Or use tools like Postman or curl to interact with the endpoints.
 ## Configuration
 
 ## Notes
-- If you encounter `Queue is full. Chat refused.`, ensure the database is empty or increase queue limits in your code.
+- If you encounter `Queue is full. Chat refused.`, ensure the database is empty or set OFFICE_END_HOUR properly.
 
 ## Project Structure
 - `ChatQueueSystem.API/` - Main API project
