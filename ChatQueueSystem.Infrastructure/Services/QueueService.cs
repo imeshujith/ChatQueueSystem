@@ -17,11 +17,10 @@ public class QueueService : IQueueService
         _logger = logger;
     }
 
-    public Task EnqueueChatAsync(Guid chatSessionId)
+    public async Task EnqueueChatAsync(Guid chatSessionId)
     {
         _chatQueue.Enqueue(chatSessionId);
         _logger.LogInformation("Chat session {ChatSessionId} enqueued", chatSessionId);
-        return Task.CompletedTask;
     }
 
     public async Task ProcessQueueAsync()
