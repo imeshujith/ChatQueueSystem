@@ -6,6 +6,13 @@ A .NET-based API for managing chat queues, agents, and teams.
 - [.NET 9 SDK](https://dotnet.microsoft.com/download/dotnet/9.0)
 - macOS, Linux, or Windows
 
+## Important: Environment Variables
+
+- `OFFICE_END_HOUR`: Set the end of office hours (e.g., `17:00:00` for 5:00 PM). Defaults to `17:00:00` if not set.
+```
+OFFICE_END_HOUR=23:00:00 dotnet run
+```
+
 ## Setup Steps
 
 ### 1. Clone the Repository
@@ -23,11 +30,6 @@ dotnet restore
 If you want to start with a clean database, delete the existing database file:
 ```
 rm ChatQueueSystem.API/chatqueue.db
-```
-
-### 4. Run Database Migrations
-```
-dotnet ef database update --project ChatQueueSystem.Infrastructure --startup-project ChatQueueSystem.API
 ```
 
 ### 5. Run the API
@@ -51,10 +53,30 @@ bash test_chat_system.sh
 ```
 Or use tools like Postman or curl to interact with the endpoints.
 
-## Configuration
+## Frontend (React)
 
-### Environment Variables
-- `OFFICE_END_HOUR`: Set the end of office hours (e.g., `17:00:00` for 5:00 PM). Defaults to `17:00:00` if not set.
+The frontend is a React app located in the `client/` directory.
+
+### 1. Install dependencies
+```
+cd client
+npm install
+```
+
+### 2. Run the development server
+```
+npm run dev
+```
+The app will start, usually at [http://localhost:5173](http://localhost:5173).
+
+### 3. Build for production
+```
+npm run build
+```
+The production build will be in the `client/dist` directory.
+
+---
+## Configuration
 
 ## Notes
 - If you encounter `Queue is full. Chat refused.`, ensure the database is empty or increase queue limits in your code.

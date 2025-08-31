@@ -1,11 +1,11 @@
-global using ChatQueueSystem.Application.Commands;
-global using ChatQueueSystem.Application.Queries;
-global using MediatR;
-global using ChatQueueSystem.Domain.Entities;
-global using ChatQueueSystem.Infrastructure.Data;
-global using Microsoft.EntityFrameworkCore;
 global using ChatQueueSystem.API.Middleware;
 global using ChatQueueSystem.Application;
+global using ChatQueueSystem.Application.Commands;
+global using ChatQueueSystem.Application.Queries;
+global using ChatQueueSystem.Domain.Entities;
 global using ChatQueueSystem.Infrastructure;
+global using ChatQueueSystem.Infrastructure.Data;
+global using MediatR;
 global using Microsoft.AspNetCore.Mvc;
+global using Microsoft.EntityFrameworkCore;
 global using System.Threading.RateLimiting;
