@@ -19,9 +19,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ChatQueueSystem.Domain\ChatQueueSystem.Domain.csproj" />
-    <ProjectReference Include="..\ChatQueueSystem.Application\ChatQueueSystem.Application.csproj" />
-    <ProjectReference Include="..\ChatQueueSystem.Infrastructure\ChatQueueSystem.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\src\ChatQueueSystem.Domain\ChatQueueSystem.Domain.csproj" />
+    <ProjectReference Include="..\..\src\ChatQueueSystem.Application\ChatQueueSystem.Application.csproj" />
+    <ProjectReference Include="..\..\src\ChatQueueSystem.Infrastructure\ChatQueueSystem.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
