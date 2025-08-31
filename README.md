@@ -1,3 +1,7 @@
+
+![ChatQueueSystem Screenshot 1](image_1.png)
+![ChatQueueSystem Screenshot 2](image_2.png)
+
 # ChatQueueSystem
 
 A .NET-based API for managing chat queues, agents, and teams.
@@ -52,28 +56,6 @@ You can use the provided shell script to test the API endpoints:
 bash test_chat_system.sh
 ```
 Or use tools like Postman or curl to interact with the endpoints.
-
-## Frontend (React)
-
-The frontend is a React app located in the `client/` directory.
-
-### 1. Install dependencies
-```
-cd client
-npm install
-```
-
-### 2. Run the development server
-```
-npm run dev
-```
-The app will start, usually at [http://localhost:5173](http://localhost:5173).
-
-### 3. Build for production
-```
-npm run build
-```
-The production build will be in the `client/dist` directory.
 
 ---
 ## Configuration
