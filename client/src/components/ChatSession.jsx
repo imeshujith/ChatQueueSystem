@@ -10,8 +10,7 @@ export default function ChatSession({ sessionId, onInactive }) {
   useEffect(() => {
     pollInterval.current = setInterval(async () => {
       try {
-        // Replace with your backend polling endpoint
-  const res = await fetch(`http://localhost:8008/api/v1/chats/${sessionId}/poll`);
+      const res = await fetch(`http://localhost:8008/api/v1/chats/${sessionId}/poll`);
         if (res.ok) {
           const data = await res.json();
           setStatus(data.status);
@@ -38,7 +37,6 @@ export default function ChatSession({ sessionId, onInactive }) {
   const sendMessage = async (e) => {
     e.preventDefault();
     if (!input) return;
-    // Replace with your backend send message endpoint
   await fetch(`http://localhost:8008/api/v1/chats/${sessionId}/message`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },

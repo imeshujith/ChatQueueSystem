@@ -1,7 +1,5 @@
-
-
 import React, { useState } from 'react';
-// Simple error boundary for debugging
+
 function ErrorBoundary({ children }) {
   const [error, setError] = useState(null);
   if (error) {
@@ -29,19 +27,17 @@ import QueueStatus from './components/QueueStatus';
 function App() {
   const [sessionId, setSessionId] = useState(null);
   const [queueLength, setQueueLength] = useState(0);
-  const [maxQueue, setMaxQueue] = useState(24); // Will update from backend
+  const [maxQueue, setMaxQueue] = useState(24);
   const [overflow, setOverflow] = useState(true);
   const [overflowActive, setOverflowActive] = useState(false);
   const [assignment, setAssignment] = useState(null);
   const [refusedReason, setRefusedReason] = useState("");
 
-  // Fetch queue status on mount and after session changes
   const fetchQueueStatus = async () => {
     try {
       const res = await fetch('http://localhost:8008/api/v1/chats/status');
       if (res.ok) {
         const data = await res.json();
-        // If your status endpoint does not return queue info, you may need to adjust this
         setQueueLength(data.queueLength || 0);
         setMaxQueue(data.maxQueue || 24);
         setOverflow(data.overflowEnabled ?? true);
@@ -50,7 +46,6 @@ function App() {
     } catch {}
   };
 
-  // Simulate API call to create a support request
   const handleSupportRequest = async (userId) => {
     setRefusedReason("");
     try {
@@ -83,7 +78,6 @@ function App() {
     fetchQueueStatus();
   };
 
-  // Fetch queue status on mount
   React.useEffect(() => {
     fetchQueueStatus();
   }, []);
