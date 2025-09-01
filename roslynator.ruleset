@@ -11,6 +11,5 @@
     <Rule Id="RCS1008" Action="Warning" />
     <Rule Id="RCS1009" Action="Warning" />
     <Rule Id="RCS1010" Action="Warning" />
-    <!-- Add more rules as needed -->
   </Rules>
 </RuleSet>
