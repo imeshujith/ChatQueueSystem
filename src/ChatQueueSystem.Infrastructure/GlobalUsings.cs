@@ -1,0 +1,11 @@
+global using ChatQueueSystem.Domain.Entities;
+global using ChatQueueSystem.Domain.Interfaces;
+global using ChatQueueSystem.Infrastructure.Data;
+global using ChatQueueSystem.Infrastructure.Repositories;
+global using ChatQueueSystem.Infrastructure.Services;
+global using Microsoft.EntityFrameworkCore;
+global using Microsoft.Extensions.Configuration;
+global using Microsoft.Extensions.DependencyInjection;
+global using Microsoft.Extensions.Hosting;
+global using Microsoft.Extensions.Logging;
+global using System.Collections.Concurrent;

@@ -40,3 +40,5 @@ TestResults/
 
 # Exclude secrets
 appsettings.Development.json
+
+.fake
